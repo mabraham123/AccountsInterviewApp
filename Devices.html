@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devices</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/51b16e748f.js" crossorigin="anonymous"></script>
+<!-- JS, Popper.js, and jQuery -->
+<script src="js/scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="d-flex" id="wrapper">
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar-wrapper">
+    <h1>Interview</h1>
+    <nav class="navbar">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item "><a class="nav-link active" href="#">Devices</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Password Managers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Emails</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Social Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Finance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Shopping</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Place of Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Other</a></li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      </ul>
+
+
+    </nav>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <button class="btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
+      <main role="main" class="container">
+
+      <!-- Header Start -->
+      <div class="container">
+        <header>
+          <h1 class="mt-4"> Devices</h1>
+          <h4>What devices do you use to access the internet?</h4>
+        </header>
+      </div>
+      <!-- Header End -->
+      <div class="container">
+        <!-- Tabs start-->
+        <div class="row">
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-device1-tab" data-toggle="pill" href="#pills-device1" role="tab" aria-controls="pills-device1" aria-selected="true">Device 1</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-primary" name="button" onclick="addDevice()">+ Add Device</button>
+        </div>
+        <!-- Tabs end-->
+        <hr>
+        <!-- Questions start-->
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-device1" role="tabpanel" aria-labelledby="pills-device1-tab">
+            <!-- Name of Device start -->
+            <br>
+            <form>
+              <div class="form-group">
+                <h4>Choose a nickname for this device</h4>
+                <p>Example: Laptop1, Workphone2, AppleWatch1</p>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Device1">
+              </div>
+            </form>
+            <!-- Name of Device end-->
+
+            <!-- Login Type start-->
+            <br>
+            <h4>How do you login to this device?</h4>
+            <div class="col">
+              <div class="row">
+                <div class="form-check form-check-inline">
+                  <label for="password" class="btn btn-primary checkbox">Password <input type="checkbox" class="checkbox" id="password" value="password"></label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label for="pincode" class="btn btn-primary checkbox">Pin Code <input type="checkbox" class="checkbox" id="pincode" value="pincode"></label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label for="sshkey" class="btn btn-primary checkbox">SSH Key <input type="checkbox" class="checkbox" id="sshkey" value="sshkey"></label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-check form-check-inline">
+                  <label for="faceid" class="btn btn-primary checkbox">FaceID <input type="checkbox" class="checkbox" id="faceid" value="faceid"></label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label for="fingerscan" class="btn btn-primary checkbox">Fingerprint Scanner <input type="checkbox" class="checkbox" id="fingerscan" value="fingerscan"></label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label for="other" class="btn btn-primary checkbox">Other <input type="checkbox" class="checkbox" id="other" value="other"></label>
+                </div>
+              </div>
+            <!-- Login Type end-->
+
+
+          </div>
+        </div>
+        <!-- Questions end-->
+      </div>
+
+
+    </main>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>
+
+
+
+<!-- Menu Toggle Script -->
+ <script>
+   $("#menu-toggle").click(function(e) {
+     e.preventDefault();
+     $("#wrapper").toggleClass("toggled");
+   });
+ </script>
+
+</body>
+</html>
