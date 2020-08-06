@@ -61,7 +61,7 @@
         <div class="row">
           <ul class="nav nav-pills" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <a class="nav-link active" id="pills-device1-tab" data-toggle="pill" href="#pills-device1" role="tab" aria-controls="pills-device1" aria-selected="true">Device 1</a>
+              <a class="nav-link" id="pills-device1-tab" data-toggle="pill" href="#pills-device1" role="tab" aria-controls="pills-device1" aria-selected="true">Device 1</a>
             </li>
           </ul>
           <button type="button" class="btn btn-primary" name="button" onclick="addDevice()">+ Add Device</button>
@@ -88,72 +88,54 @@
             <div class="col">
               <div class="row">
                 <div class="form-check form-check-inline">
-                  <label for="password" class="btn btn-primary checkbox">Password <input type="checkbox" class="checkbox" id="password" value="password" onclick="DevicesLoginArrayEventHandler(this)"></label>
+                  <label for="password" class="btn btn-primary checkbox">Password <input type="checkbox" class="checkbox" id="password" value="password" onchange="DevicesLoginArrayEventHandler(this)"></label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <label for="pincode" class="btn btn-primary checkbox">Pin Code <input type="checkbox" class="checkbox" id="pincode" value="pincode" onclick="DevicesLoginArrayEventHandler(this)"></label>
+                  <label for="pincode" class="btn btn-primary checkbox">Pin Code <input type="checkbox" class="checkbox" id="pincode" value="pincode" onchange="DevicesLoginArrayEventHandler(this)"></label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <label for="sshkey" class="btn btn-primary checkbox">SSH Key <input type="checkbox" class="checkbox" id="sshkey" value="sshkey" onclick="DevicesLoginArrayEventHandler(this)"></label>
+                  <label for="sshkey" class="btn btn-primary checkbox">SSH Key <input type="checkbox" class="checkbox" id="sshkey" value="sshkey" onchange="DevicesLoginArrayEventHandler(this)"></label>
                 </div>
-              </div>
+              <!-- </div>
 
-              <div class="row">
+              <div class="row"> -->
                 <div class="form-check form-check-inline">
-                  <label for="faceid" class="btn btn-primary checkbox">FaceID <input type="checkbox" class="checkbox" id="faceid" value="faceid" onclick="DevicesLoginArrayEventHandler(this)"></label>
+                  <label for="faceid" class="btn btn-primary checkbox">FaceID <input type="checkbox" class="checkbox" id="faceid" value="faceid" onchange="DevicesLoginArrayEventHandler(this)"></label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <label for="fingerscan" class="btn btn-primary checkbox">Fingerprint Scanner <input type="checkbox" class="checkbox" id="fingerscan" value="fingerscan" onclick="DevicesLoginArrayEventHandler(this)"></label>
+                  <label for="fingerscan" class="btn btn-primary checkbox">Fingerprint Scanner <input type="checkbox" class="checkbox" id="fingerscan" value="fingerscan" onchange="DevicesLoginArrayEventHandler(this)"></label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <label for="other" class="btn btn-primary checkbox">Other <input type="checkbox" class="checkbox" id="other" value="other" onclick="DevicesLoginArrayEventHandler(this)"></label>
+                  <label for="other" class="btn btn-primary checkbox">Other <input type="checkbox" class="checkbox" id="other" value="other" onchange="DevicesLoginArrayEventHandler(this)"></label>
                 </div>
               </div>
               </div>
             <!-- Login Type end-->
-
+            <br>
             <!--Accordion Start-->
-            <div class="accordion" id="DetailedQuestions">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Collapsible Group Item #1
-                    </button>
-                  </h2>
-                </div>
+            <div id="Questions">
+              <!-- <div class="accordion" id="DetailedQuestions">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Collapsible Group Item #1
+                      </button>
+                    </h2>
+                  </div>
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#DetailedQuestions">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#DetailedQuestions">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="accordion" id="DetailedQuestions1">
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                      Collapsible Group Item #1
-                    </button>
-                  </h2>
-                </div>
-
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#DetailedQuestions">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
+              </div> -->
             </div>
 
-
-            <!-- Accordion End-->
-
-        </div>
+            <!-- Accordion End--></div>
         <!-- Questions end-->
-      </div>
+        </div>
     </main>
     </div>
   </div>
